@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var datePicker: UIDatePicker!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    let localeID = Locale.preferredLanguages.first
+    datePicker.locale = Locale(identifier: localeID!)
   }
 
 
